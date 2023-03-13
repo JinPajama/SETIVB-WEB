@@ -1,3 +1,5 @@
+"use strict";
+
 //express로 서버 만들어보기
 const express = require('express');
 const app = express();
@@ -7,6 +9,7 @@ const home = require("./src/routes/home")
 //App setting
 app.set("views", "./src/views");
 app.set("view engine", "ejs");
+app.use(express.static(`${__dirname}/src/public`));
 
 app.use('/', home); // use  = 미들웨어 등록 메소드
 
