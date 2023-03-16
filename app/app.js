@@ -2,14 +2,20 @@
 
 //express로 서버 만들어보기
 const express = require('express');
+const bodyparser = require("body-parser");
 const app = express();
-const home = require("./src/routes/home")
+const home = require("./src/routes/home");
+const bodyParser = require('body-parser');
 
 
 //App setting
 app.set("views", "./src/views");
 app.set("view engine", "ejs");
 app.use(express.static(`${__dirname}/src/public`));
+app.use(bodyparser.json());
+
+//URL을 통해 전달되는 데이터에 한글, 공백 등과 같은 문자가 포함될 경우 인식되지 않는 문제 해결
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/', home); // use  = 미들웨어 등록 메소드
 

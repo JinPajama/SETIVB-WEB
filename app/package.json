@@ -1,9 +1,9 @@
 {
-  "name": "login-lecture", 
+  "name": "login-lecture",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "bin": {          
+  "bin": {
     "login-lecture": "bin/www.js"
   },
   "scripts": {
@@ -12,5 +12,8 @@
   },
   "keywords": [],
   "author": "Ph.Jin",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.2"
+  }
 }
