@@ -18,5 +18,11 @@ function login(){
             "Content-Type": "application/json",
         },
         body: JSON.stringify(req),
+    })
+    .then((res) => res.json())
+    .then((res) => {
+        if (res.success === true){      //로그인 성공 시
+            console.log('asdfasdf');
+        }
     });
 }
