@@ -22,7 +22,13 @@ function login(){
     .then((res) => res.json())
     .then((res) => {
         if (res.success === true){      //로그인 성공 시
-            console.log('asdfasdf');
+            location.href = "/";
         }
+        else {
+            alert(res.msg);
+        }
+    })
+    .catch((err) => {
+        console.error(new Error("로그인 중 에러 발생"));
     });
 }

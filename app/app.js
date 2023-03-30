@@ -7,7 +7,6 @@ const app = express();
 const home = require("./src/routes/home");
 const bodyParser = require('body-parser');
 
-
 //App setting
 app.set("views", "./src/views");
 app.set("view engine", "ejs");
