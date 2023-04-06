@@ -11,11 +11,18 @@ console.log('hello register');
 btn.addEventListener("click", register);
 
 function register(){
+    if (!id.value) return alert("아이디를 입력해주세요.");
+    if (!name.value) return alert("이름을 입력해주세요.");
+    if (!pw.value) return alert("패스워드를 입력해주세요.");
+
+    if (pw.value !== confirmPw.value) {
+        return alert("비밀번호 재확인이 일치하지 않습니다.");
+    }
+
     const req = {
         id : id.value,
         name : name.value,
         pw : pw.value,
-        confirmPw : confirmPw.value,
     };
 
     fetch("/register", {
@@ -28,7 +35,8 @@ function register(){
     .then((res) => res.json())
     .then((res) => {
         if (res.success === true){      //로그인 성공 시
-            location.href = "/";
+            location.href = "/login";
+            console.log('/login으로 이동')
         }
         else {
             alert(res.msg);
