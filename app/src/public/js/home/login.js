@@ -7,11 +7,11 @@ btn = document.querySelector("#btn");
 btn.addEventListener("click", login);
 
 function login(){
+    console.log('login() excuted')
     const req = {
         id : id.value,
         pw : pw.value,
     };
-
     fetch("/login", {
         method: "POST",
         headers: {

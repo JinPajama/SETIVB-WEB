@@ -1,7 +1,6 @@
 "use strict"
 
 const { response } = require("../../../app");
-const userStorage = require("../../models/UserStorage");
 const User = require("../../models/User");
 
 const output = {
@@ -12,6 +11,10 @@ const output = {
     login: (req, res) => {
         res.render('home/login');
     },
+
+    register: (req, res) => {
+        res.render('home/register');
+    },
 };
 
 const process = {
@@ -19,7 +22,6 @@ const process = {
         const user = new User(req.body);
         const response = user.login();
         return res.json(response);
-
 
     //     const id = req.body.id,
     //     pw = req.body.pw;
