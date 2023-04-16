@@ -11,6 +11,7 @@ function login(){
         id : id.value,
         pw : pw.value,
     };
+    if (!id.value) return alert("아이디를 입력해주세요.");
     fetch("/login", {
         method: "POST",
         headers: {
