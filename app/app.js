@@ -3,10 +3,13 @@
 //express로 서버 만들어보기
 const express = require('express');
 const bodyparser = require("body-parser");
+const dotenv = require("dotenv");
+dotenv.config();
+
 const app = express();
 const home = require("./src/routes/home");
 const bodyParser = require('body-parser');
-
+const connect = require('./src/databases/db')
 //App setting
 app.set("views", "./src/views");
 app.set("view engine", "ejs");
@@ -17,6 +20,8 @@ app.use(bodyparser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/', home); // use  = 미들웨어 등록 메소드
+
+connect();
 
 /*
 app.get('/', function(req, res){

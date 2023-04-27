@@ -15,6 +15,12 @@ const output = {
     register: (req, res) => {
         res.render('home/register');
     },
+
+    download: (req, res) => {
+        //res.redirect("https://www.naver.com");  //test page
+        res.redirect("https://www.dropbox.com/s/yd0t5ntb5kmb2sd/LIST.jpg?dl=1");
+        //추후 드롭박스 다운로드 변경
+    }
 };
 
 const process = {
@@ -29,7 +35,7 @@ const process = {
         const response = await user.register();
         return res.json(response);
     },
-    
+
 };
  
 module.exports = {
