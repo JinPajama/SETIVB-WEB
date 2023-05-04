@@ -18,8 +18,8 @@ const output = {
 
     download: (req, res) => {
         //res.redirect("https://www.naver.com");  //test page
-        res.redirect("https://www.dropbox.com/s/yd0t5ntb5kmb2sd/LIST.jpg?dl=1");
-        //추후 드롭박스 다운로드 변경
+        res.redirect("https://www.dropbox.com/s/f10y4jum4qcxsuv/SETIVB_CBT_v1.0.1.zip?dl=1");
+        //Dropbox Download Redirection
     }
 };
 
