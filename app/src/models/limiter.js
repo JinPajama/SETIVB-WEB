@@ -2,9 +2,11 @@
 
 const rateLimit = require("express-rate-limit");
 
+var min = 1;
 const limiter = rateLimit({
-    windowMs: 60 * 1000, // 1 minute
+    windowMs: min * 60 * 1000, // 1 minute
     max: 2, // limit each IP to 2 requests per windowMs
+    methods: ['GET', 'POST'],
     message:
       "Too many requests from this IP",
     statusCode: 429, // Set status code for the response
@@ -13,9 +15,9 @@ const limiter = rateLimit({
         res.setHeader('Content-Type', 'application/json;charset=utf-8');
         res.setHeader('Retry-After', '60');
         res.status(this.statusCode).json({ 
-            message: '1Too many requests from this IP, please try again after a minute' 
+            message: 'Too many requests from this IP, please try again after a minute' 
         });
     }
 });
-
+  
 module.exports = limiter;

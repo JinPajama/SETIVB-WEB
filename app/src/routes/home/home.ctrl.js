@@ -2,6 +2,7 @@
 
 const { response } = require("../../../app");
 const User = require("../../models/User");
+const fs = require('fs');
 
 const output = {
     home: (req, res) => {
@@ -17,9 +18,7 @@ const output = {
     },
 
     download: (req, res) => {
-        //res.redirect("https://www.naver.com");  //test page
         res.redirect("https://www.dropbox.com/s/yd0t5ntb5kmb2sd/LIST.jpg?dl=1");
-        //추후 드롭박스 다운로드 변경
     }
 };
 
@@ -36,8 +35,27 @@ const process = {
         return res.json(response);
     },
 
+    contact : async (req, res) => {
+        const data = req.body;
+        var contents = fs.readFileSync('src/databases/contact.json', 'utf-8');
+        if (!contents) {
+            contents += '[]';
+        }
+        const contacts = JSON.parse(contents);
+        var lastData = contacts[contacts.length - 1];
+        if (lastData==null){
+            lastData = '0';
+        }
+        if (JSON.stringify(data.content) === JSON.stringify(lastData.content)) {
+            return res.json({ error: 'duplicate data' });
+        }
+        data.timestamp = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
+        contacts.push(data);
+        fs.writeFileSync('src/databases/contact.json', JSON.stringify(contacts, null, 2));
+        return res.json({ success: true });
+      }
 };
- 
+
 module.exports = {
     output,
     process,

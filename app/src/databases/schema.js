@@ -1,13 +1,8 @@
 import mongoose from "mongoose";
 
-const courseSchema = new mongoose.Schema({
-    courseName : {}
-})
-
-const userSchema = new mongoose.Schema({
-    name: {type: String, required: true, unique: true},
-    age: {type: Number, required: true},
-    married: {type: Boolean},
-    comment: {type: String},
+const contactSchema = new mongoose.Schema({
+    name: {type: String, required: true},
+    email: {type: String, required: true},
+    message: {type: String, require: true},
     createAt: {type: Date},
 })
