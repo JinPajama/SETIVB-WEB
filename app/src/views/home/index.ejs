@@ -35,8 +35,8 @@
 								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
 								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
 								<li><a href="#summary" id="feature-link"><span class="icon solid fa-info">Feature-list</span></a></li>
-								<li><a href="/contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
-								<li><a href="/download" id="download-link"><span class="icon solid fa-download">Download</span></a></li>
+								<li><a href="#top" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+								<li><a href="#top" id="download-link"><span class="icon solid fa-download">Download</span></a></li>
 							</ul>
 						</nav>
 
@@ -277,6 +277,15 @@
 					}
 				});
 			}
+
+			document.getElementById("contact-link").addEventListener('click', function() {
+				location.href = '/contact';
+			});
+
+			document.getElementById("download-link").addEventListener('click', function() {
+				location.href = 'download';
+			});
+
 			</script>
 	</body>
 </html>
