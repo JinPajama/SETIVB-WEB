@@ -3,6 +3,7 @@
 const { response } = require("../../../app");
 const User = require("../../models/User");
 const fs = require('fs');
+const { json } = require("body-parser");
 
 const output = {
     home: (req, res) => {
@@ -19,6 +20,10 @@ const output = {
 
     download: (req, res) => {
         res.redirect("https://www.dropbox.com/s/yd0t5ntb5kmb2sd/LIST.jpg?dl=1");
+    },
+
+    contact: (req, res) => {
+        res.render('home/contact');
     }
 };
 
@@ -46,13 +51,11 @@ const process = {
         if (lastData==null){
             lastData = '0';
         }
-        if (JSON.stringify(data.content) === JSON.stringify(lastData.content)) {
-            return res.json({ error: 'duplicate data' });
-        }
         data.timestamp = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
         contacts.push(data);
+        console.log(JSON.stringify(data, null, 2));
         fs.writeFileSync('src/databases/contact.json', JSON.stringify(contacts, null, 2));
-        return res.json({ success: true });
+        return res.render('home/index');
       }
 };
 
