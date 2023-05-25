@@ -76,7 +76,7 @@
 									  <video video src="images/airtouch.mp4" controls autoplay muted width="80%" height="40%"></video>
 									  <button class="btn btn-danger" id="close">닫기</button>
 									</div>
-								  </div> 
+								</div> 
 								<button id="watch">Watch</button>
 							</footer>
 							<!-- watch.html -> 반응형 으로 변환  -->
@@ -98,10 +98,16 @@
 							<div class="row">
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/board.png" alt="" /></a>
+										<div class="image fit"><img src="images/board.png" alt="" /></a>
 										<header>
-											<h3>Blackboard function</h3>
+											<h3><button id="board">Blackboard function</button></h3>
 										</header>
+										<div class="boardb-bg">
+											<div class="boardw-bg">
+											  <video video src="images/airtouch.mp4" controls autoplay muted width="80%" height="40%"></video>
+											  <button class="btn btn-danger" id="close2">닫기</button>
+											</div>
+										</div> 
 									</article>
 									<article class="item">
 										<a href="#" class="image fit"><img src="images/quarantine.png" alt="" /></a>
@@ -120,16 +126,28 @@
 									<article class="item">
 										<a href="#" class="image fit"><img src="images/mouse.png" alt="" /></a>
 										<header>
-											<h3>Mouse control</h3>
+											<h3><button id="mouse">Mouse control</button></h3>
 										</header>
+										<div class="mouseb-bg">
+											<div class="mousew-bg">
+											  <video video src="images/airtouch.mp4" controls autoplay muted width="80%" height="40%"></video>
+											  <button class="btn btn-danger" id="close3">닫기</button>
+											</div>
+										</div> 
 									</article>
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="item">
 										<a href="#" class="image fit"><img src="images/volume.png" alt="" /></a>
 										<header>
-											<h3>Volume control</h3>
+											<h3><button id="volume">Volume control</button></h3>
 										</header>
+										<div class="volumeb-bg">
+											<div class="volumew-bg">
+											  <video video src="images/airtouch.mp4" controls autoplay muted width="80%" height="40%"></video>
+											  <button class="btn btn-danger" id="close4">닫기</button>
+											</div>
+										</div> 
 									</article>
 									<article class="item">
 										<a href="#" class="image fit"><img src="images/remote.jpg" alt="" /></a>
@@ -252,6 +270,24 @@
 				})
 				document.querySelector('#close').addEventListener('click', function(){
 					document.querySelector('.watchb-bg').classList.remove('modal-show');
+				})
+				document.querySelector('#board').addEventListener('click', function(){
+					document.querySelector('.boardb-bg').classList.add('modal-show2');
+				})
+				document.querySelector('#close2').addEventListener('click', function(){
+					document.querySelector('.boardb-bg').classList.remove('modal-show2');
+				})
+				document.querySelector('#mouse').addEventListener('click', function(){
+					document.querySelector('.mouseb-bg').classList.add('modal-show3');
+				})
+				document.querySelector('#close3').addEventListener('click', function(){
+					document.querySelector('.mouseb-bg').classList.remove('modal-show3');
+				})
+				document.querySelector('#volume').addEventListener('click', function(){
+					document.querySelector('.volumeb-bg').classList.add('modal-show4');
+				})
+				document.querySelector('#close4').addEventListener('click', function(){
+					document.querySelector('.volumeb-bg').classList.remove('modal-show4');
 				})
 			</script>
 			<script>
