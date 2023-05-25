@@ -98,7 +98,7 @@
 							<div class="row">
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<div class="image fit"><img src="images/board.png" alt="" /></a>
+										<div class="image fit"><img src="images/board.png" alt="" /></div>
 										<header>
 											<h3><button id="board">Blackboard function</button></h3>
 										</header>
@@ -118,42 +118,54 @@
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/clock.png" alt="" /></a>
+										<div class="image fit"><img src="images/clock.png" alt="" /></div>
 										<header>
-											<h3>Real-time recognization</h3>
+											<h3><button id="clock">Real-time recognization</button></h3>
 										</header>
+										<div class="clockb-bg">
+											<div class="clockw-bg">
+											  <video video src="images/airtouch.mp4" controls autoplay muted width="80%" height="40%"></video>
+											  <button class="btn btn-danger" id="close3">닫기</button>
+											</div>
+										</div> 
 									</article>
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/mouse.png" alt="" /></a>
+										<div class="image fit"><img src="images/mouse.png" alt="" /></div>
 										<header>
 											<h3><button id="mouse">Mouse control</button></h3>
 										</header>
 										<div class="mouseb-bg">
 											<div class="mousew-bg">
 											  <video video src="images/airtouch.mp4" controls autoplay muted width="80%" height="40%"></video>
-											  <button class="btn btn-danger" id="close3">닫기</button>
+											  <button class="btn btn-danger" id="close4">닫기</button>
 											</div>
 										</div> 
 									</article>
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/volume.png" alt="" /></a>
+										<div class="image fit"><img src="images/volume.png" alt="" /></div>
 										<header>
 											<h3><button id="volume">Volume control</button></h3>
 										</header>
 										<div class="volumeb-bg">
 											<div class="volumew-bg">
 											  <video video src="images/airtouch.mp4" controls autoplay muted width="80%" height="40%"></video>
-											  <button class="btn btn-danger" id="close4">닫기</button>
+											  <button class="btn btn-danger" id="close5">닫기</button>
 											</div>
 										</div> 
 									</article>
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/remote.jpg" alt="" /></a>
+										<div class="image fit"><img src="images/remote.jpg" alt="" /></div>
 										<header>
-											<h3>Remote operation</h3>
+											<h3><button id="remote">Remote operation</button></h3>
 										</header>
+										<div class="remoteb-bg">
+											<div class="remotew-bg">
+											  <video video src="images/airtouch.mp4" controls autoplay muted width="80%" height="40%"></video>
+											  <button class="btn btn-danger" id="close6">닫기</button>
+											</div>
+										</div> 
 									</article>
 								</div>
 							</div>
@@ -277,17 +289,29 @@
 				document.querySelector('#close2').addEventListener('click', function(){
 					document.querySelector('.boardb-bg').classList.remove('modal-show2');
 				})
-				document.querySelector('#mouse').addEventListener('click', function(){
-					document.querySelector('.mouseb-bg').classList.add('modal-show3');
+				document.querySelector('#clock').addEventListener('click', function(){
+					document.querySelector('.clockb-bg').classList.add('modal-show3');
 				})
 				document.querySelector('#close3').addEventListener('click', function(){
-					document.querySelector('.mouseb-bg').classList.remove('modal-show3');
+					document.querySelector('.clockb-bg').classList.remove('modal-show3');
 				})
-				document.querySelector('#volume').addEventListener('click', function(){
-					document.querySelector('.volumeb-bg').classList.add('modal-show4');
+				document.querySelector('#mouse').addEventListener('click', function(){
+					document.querySelector('.mouseb-bg').classList.add('modal-show4');
 				})
 				document.querySelector('#close4').addEventListener('click', function(){
-					document.querySelector('.volumeb-bg').classList.remove('modal-show4');
+					document.querySelector('.mouseb-bg').classList.remove('modal-show4');
+				})
+				document.querySelector('#volume').addEventListener('click', function(){
+					document.querySelector('.volumeb-bg').classList.add('modal-show5');
+				})
+				document.querySelector('#close5').addEventListener('click', function(){
+					document.querySelector('.volumeb-bg').classList.remove('modal-show5');
+				})
+				document.querySelector('#remote').addEventListener('click', function(){
+					document.querySelector('.remoteb-bg').classList.add('modal-show6');
+				})
+				document.querySelector('#close6').addEventListener('click', function(){
+					document.querySelector('.remoteb-bg').classList.remove('modal-show6');
 				})
 			</script>
 			<script>
