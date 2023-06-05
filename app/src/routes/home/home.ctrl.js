@@ -19,7 +19,7 @@ const output = {
     },
 
     download: (req, res) => {
-        res.redirect("https://www.dropbox.com/s/yd0t5ntb5kmb2sd/LIST.jpg?dl=1");
+        res.redirect("https://www.dropbox.com/scl/fi/271ishfxbvf38bn1qmtef/SETIVB.zip?dl=1&rlkey=1lg7q4vwt3qhlr9hd9szqudh9");
     },
 
     contact: (req, res) => {

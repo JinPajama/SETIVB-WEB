@@ -1,0 +1,3 @@
+(node:158379) Warning: Accessing non-existent property 'response' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+80포트에서 서버 가동중
