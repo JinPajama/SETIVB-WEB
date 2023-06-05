@@ -210,7 +210,7 @@ input, select, textarea {
 		clear: both;
 	}
 	/* watch */
-	.watchb-bg {
+	/* .watchb-bg {
 		left:25%;
 		top:15%;
 		width : 60%;
@@ -220,7 +220,7 @@ input, select, textarea {
 		z-index : 5;
 		padding: 30px;
 		display: none;
-	  }
+	  } */
 	  .boardb-bg {
 		left:25%;
 		top:15%;
@@ -279,10 +279,10 @@ input, select, textarea {
 	  /* 위에는 모달창  */
 	  @media screen and (min-width: 961px) and (max-width: 1880px) {
 
-		.watchb-bg {
+		/* .watchb-bg {
 			width: 1200px;
 			height: 1200px;
-		}
+		} */
 		.boardb-bg {
 			width: 1200px;
 			height: 1200px;
@@ -308,10 +308,10 @@ input, select, textarea {
 	
 	@media screen and (min-width: 961px) and (max-width: 1620px) {
 	
-		.watchb-bg {
+		/* .watchb-bg {
 			width: 960px;
 			height: 550px;
-		}
+		} */
 		.boardb-bg {
 			width: 960px;
 			height: 550px;
@@ -336,10 +336,10 @@ input, select, textarea {
 	
 	@media screen and (min-width: 961px) and (max-width: 1320px) {
 	
-		.watchb-bg {
+		/* .watchb-bg {
 			width: 100%;
 			height: 75%;
-		}
+		} */
 		.boardb-bg {
 			width: 100%;
 			height: 75%;
@@ -364,10 +364,10 @@ input, select, textarea {
 	
 	@media screen and (max-width: 960px) {
 	
-		.watchb-bg {
+		/* .watchb-bg {
 			width: 100%;
 			height: 70%;
-		}
+		} */
 		.boardb-bg {
 			width: 100%;
 			height: 70%;
@@ -392,10 +392,10 @@ input, select, textarea {
 	
 	@media screen and (max-width: 736px) {
 	
-		.watchb-bg {
+		/* .watchb-bg {
 			width: 100%;
 			height: 60%;
-		}
+		} */
 		.boardb-bg {
 			width: 100%;
 			height: 60%;
@@ -419,10 +419,10 @@ input, select, textarea {
 	}
 	@media screen and (max-width: 536px) {
 	
-		.watchb-bg {
+		/* .watchb-bg {
 			width: 100%;
 			height: 42%;
-		}
+		} */
 		.boardb-bg {
 			width: 100%;
 			height: 42%;
@@ -445,11 +445,11 @@ input, select, textarea {
 		}
 	}
 	/* 위쪽은 미디어쿼리를 사용함 */
-	  .watchw-bg {
+	  /* .watchw-bg {
 		background: white;
 		border-radius: 5px;
 		padding: 30px;
-	  } 
+	  }  */
 	  /* 위에는 모달창 안쪽 */
 	  .modal-show {
 		display: block;
